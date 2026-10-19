@@ -1,0 +1,147 @@
+
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .header_nav {color : #8A95A4;}
+
+        main{
+            background-color: #F7F8FA;
+            padding: 40px;
+        }
+
+        .hero h1 ,.hero p , legend  , .group_label{
+            margin: 20px;
+        }
+        p{ color: #8792A1;}
+
+        fieldset{
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input , select , textarea , button {
+            padding: 10px;
+            border-radius: 7px;
+            width: 100%;
+        }
+
+        .inputs{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .ajouter_demande{
+            background-color: #252F3E;
+            color: white;
+        }
+
+        .premiere_col__header_listeDemandes{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .carte_tab{
+            display: none;
+        }
+        
+
+        .liste_demandes{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+        }
+
+        article{
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: start;
+        }
+
+        .categorie_badge{
+            color:#64748B;
+            background-color: #F0F3F7;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .priority_badge{
+            color:#BA6444;
+            background-color: #FFF0E8;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .icons_NumTickets{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badges{
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: flex-end;
+            gap: 40px;
+        }
+
+        .edit{
+            color: #64748B;
+        }
+
+        .delete{
+            color: #CC626A;
+        }
+
+
+        @media (min-width: 768px) {
+            .inputs{
+                grid-template-columns: 1fr 1fr;
+            }
+            .header_listeDemandes{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .premiere_col__header_listeDemandes{
+                gap: 10px;
+            }
+            .carte_tab{
+                display: flex;
+                align-items: center;
+                color: #8B96A5;
+                background-color: #EDF0F4;
+                border-radius: 10px;
+                height: 50%;
+            }
+
+            .liste_demandes{
+                grid-template-columns: 1fr 1fr;
+            }
+            .carte , .tab {
+                padding: 10px;
+            }
+            .focus_carte_tab{
+                background-color: white;
+                color : #202A38;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .inputs{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .liste_demandes{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }

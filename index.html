@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/img/logo.png" alt="logo_helpdesk">
+        <nav>
+            <p class="header_nav">Atlas Solutions / Support</p>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Gestion des demandes</h1>
+            <p>Centralisez les incidents et simplifiez le suivi de votre équipe.</p>
+            <form action="">
+                <fieldset>
+                    <div class="legend">
+                        <h2>Créer une demande</h2>
+                        <p>Décrivez votre problème informatique en quelques étapes.</p>  
+                    </div>
+
+                    <div class="inputs">
+                            <div class="group_label label_input">
+                                <label for="titre">titre</label><br>
+                                <input type="text" id="titre" name="titre" placeholder="Connexion Wi-Fi instable" required>
+                            </div>
+                            <div class="group_label label_select">
+                                <label for="categorie">categorie</label><br>
+                                <select name="categorie" id="categorie">
+                                    <option value="réseau">réseau</option>
+                                </select>
+                            </div>
+                            <div class="group_label label_select">
+                                <label for="priorité">priorité</label><br>
+                                <select name="priorité" id="priorité">
+                                    <option value="Basse">Basse</option>
+                                    <option value="Normale">Normale</option>
+                                    <option value="haute">haute</option>
+                                </select>
+                            </div>
+                            <div class=" group_label label_textarea">
+                                <label for="description">description</label><br>
+                                <textarea name="description" id="description" placeholder="Décrivez le problème informatique rencontré..."></textarea>
+                            </div>
+                    </div>
+                    <button class="ajouter_demande">＋  Ajouter la demande</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="section_liste_demandes">
+
+            <div class="header_listeDemandes">
+
+                <div class="premiere_col__header_listeDemandes">
+                    <h2>Liste des demandes</h2>
+                    <p class="categorie_badge">3 demandes</p>
+                </div>
+
+                <div class="carte_tab">
+                    <p class="focus_carte_tab carte">Cartes</p>
+                    <p class="tab">Tableau</p>
+                </div>
+
+            </div>
+
+            <div class="liste_demandes">
+
+                <article>
+                    <div class="icons_NumTickets">
+                        <div class="icon">ppp</div>
+                        <p class="numticket">HD-001</p>
+                    </div>
+
+                    <div>
+                        <h3>Connexion Wi-Fi instable</h3>
+                        <p>Le réseau se déconnecte régulièrement.</p>
+                    </div>
+                    <div class="badges">
+                        <p class="categorie_badge">Réseau</p>
+                        <p class="priority_badge">haute</p>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a class="edit">modifier</a>
+                        <a class="delete">supprimer</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="icons_NumTickets">
+                        <div class="icon">ppp</div>
+                        <p class="numticket">HD-001</p>
+                    </div>
+
+                    <div>
+                        <h3>Connexion Wi-Fi instable</h3>
+                        <p>Le réseau se déconnecte régulièrement.</p>
+                    </div>
+                    <div class="badges">
+                        <p class="categorie_badge">Réseau</p>
+                        <p class="priority_badge">haute</p>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a class="edit">modifier</a>
+                        <a class="delete">supprimer</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="icons_NumTickets">
+                        <div class="icon">ppp</div>
+                        <p class="numticket">HD-001</p>
+                    </div>
+
+                    <div>
+                        <h3>Connexion Wi-Fi instable</h3>
+                        <p>Le réseau se déconnecte régulièrement.</p>
+                    </div>
+                    <div class="badges">
+                        <p class="categorie_badge">Réseau</p>
+                        <p class="priority_badge">haute</p>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a class="edit">modifier</a>
+                        <a class="delete">supprimer</a>
+                    </div>
+                </article>
+
+                
+            </div> 
+
+        </section>
+    </main>
+</body>
+</html>
