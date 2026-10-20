@@ -107,6 +107,7 @@
         @media (min-width: 768px) {
             .inputs{
                 grid-template-columns: 1fr 1fr;
+                /* grid-template-areas: ; */
             }
             .header_listeDemandes{
                 display: flex;
