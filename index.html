@@ -19,7 +19,7 @@
         <section class="hero">
             <h1>Gestion des demandes</h1>
             <p>Centralisez les incidents et simplifiez le suivi de votre équipe.</p>
-            <form action="">
+            <form action="" onsubmit="event.preventDefault()">
                 <fieldset>
                     <div class="legend">
                         <h2>Créer une demande</h2>
@@ -34,14 +34,17 @@
                             <div class="group_label label_select">
                                 <label for="categorie">categorie</label><br>
                                 <select name="categorie" id="categorie">
+                                    <option value="">choisit une categorie</option>
                                     <option value="réseau">réseau</option>
+                                    <option value="Matériel">Matériel</option>
+                                    <option value="Logiciel">Logiciel</option>
                                 </select>
                             </div>
                             <div class="group_label label_select">
                                 <label for="priorité">priorité</label><br>
                                 <select name="priorité" id="priorité">
-                                    <option value="Basse">Basse</option>
                                     <option value="Normale">Normale</option>
+                                    <option value="Basse">Basse</option>
                                     <option value="haute">haute</option>
                                 </select>
                             </div>
@@ -50,7 +53,7 @@
                                 <textarea name="description" id="description" placeholder="Décrivez le problème informatique rencontré..."></textarea>
                             </div>
                     </div>
-                    <button class="ajouter_demande">＋  Ajouter la demande</button>
+                    <button class="ajouter_demande" onclick = "validateForm()">＋  Ajouter la demande</button>
                 </fieldset>
             </form>
         </section>
@@ -71,72 +74,7 @@
 
             </div>
 
-            <div id="liste_demandes" class="liste_demandes" >
-
-                <!-- <article>
-                    <div class="icons_NumTickets">
-                        <div class="icon">ppp</div>
-                        <p class="numticket">HD-001</p>
-                    </div>
-
-                    <div>
-                        <h3>Connexion Wi-Fi instable</h3>
-                        <p>Le réseau se déconnecte régulièrement.</p>
-                    </div>
-                    <div class="badges">
-                        <p class="categorie_badge">Réseau</p>
-                        <p class="priority_badge">haute</p>
-                    </div>
-                    <hr>
-                    <div class="buttons">
-                        <a class="edit">modifier</a>
-                        <a class="delete">supprimer</a>
-                    </div>
-                </article>
-
-                <article>
-                    <div class="icons_NumTickets">
-                        <div class="icon">ppp</div>
-                        <p class="numticket">HD-001</p>
-                    </div>
-
-                    <div>
-                        <h3>Connexion Wi-Fi instable</h3>
-                        <p>Le réseau se déconnecte régulièrement.</p>
-                    </div>
-                    <div class="badges">
-                        <p class="categorie_badge">Réseau</p>
-                        <p class="priority_badge">haute</p>
-                    </div>
-                    <hr>
-                    <div class="buttons">
-                        <a class="edit">modifier</a>
-                        <a class="delete">supprimer</a>
-                    </div>
-                </article>
-
-                <article>
-                    <div class="icons_NumTickets">
-                        <div class="icon">ppp</div>
-                        <p class="numticket">HD-001</p>
-                    </div>
-
-                    <div>
-                        <h3>Connexion Wi-Fi instable</h3>
-                        <p>Le réseau se déconnecte régulièrement.</p>
-                    </div>
-                    <div class="badges">
-                        <p class="categorie_badge">Réseau</p>
-                        <p class="priority_badge">haute</p>
-                    </div>
-                    <hr>
-                    <div class="buttons">
-                        <a class="edit">modifier</a>
-                        <a class="delete">supprimer</a>
-                    </div>
-                </article> -->
-
-                
+            <div id="liste_demandes" class="liste_demandes" >   
             </div> 
 
         </section>
