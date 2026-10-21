@@ -3,6 +3,7 @@ const données = [
     {num_ticket : "HD-002" , titre : "Installation d’un logiciel" ,description : "Installer un logiciel sur le poste.", catégorie : "Logiciel" , priorité : "Normale"},
     {num_ticket : "HD-003" , titre : "Clavier défectueux" ,description : "Certaines touches ne fonctionnent plus.", catégorie : "Matériel" , priorité : "Basse"}
  ];
+ let modifier_ajouter ;
 
  let inc_ticket = 4;
 
@@ -126,19 +127,11 @@ function supprimer(p_num_ticket){
 }
 
 
-
-function validateForm(){
-
-    let titre = document.getElementById("titre");
-    let categorie = document.getElementById("categorie");
-    let priorité = document.getElementById("priorité");
-    let description = document.getElementById("description");
-
-    if(titre.value == "" || categorie.value == "" || priorité.value == "" || description.value == "" ){
-        window.alert("veuillez remplis tous les champs");
-        return;
+function ajouter (){
+    const validation = validateForm();
+    if(!validation){
+        return
     }
-
     const demande = {
         num_ticket : `HD-${inc_ticket++}`,
         titre : titre.value ,
@@ -149,16 +142,80 @@ function validateForm(){
 
     données.push(demande);
     afficher();
+}
 
+function validateForm(){
 
-    titre.value = "";
-    description.value = "";
-    categorie.value = "";
-    priorité = "";
+    let titre = document.getElementById("titre");
+    let categorie = document.getElementById("categorie");
+    let priorité = document.getElementById("priorité");
+    let description = document.getElementById("description");
+
+    if(titre.value == "" || categorie.value == "" || priorité.value == "" || description.value == "" ){
+        window.alert("veuillez remplis tous les champs");
+        return false;
+    }else{
+        return true;
+    }
+
+    // if(!modifier_ajouter){
+    //     ajouter(titre , categorie , priorité , description);
+    // }else{
+    //     modifier();
+    // }
+    // afficher();
+
+    // titre.value = "";
+    // description.value = "";
+    // categorie.value = "";
+    // priorité = "";
     
 }
 
-function recuperer_data{
+
+function recuperer_data (p_num_ticket){
+    modifier_ajouter = true ;
+    document.querySelector(".ajouter_demande").textContent="modifier";
+    document.querySelector(".ajouter_demande").onclick = "modifier('${p_num_ticket}')";
+    let index_mod ;
+    données.forEach( (element,index) => {
+        if(element.num_ticket == p_num_ticket){
+            index_mod = index;
+        }
+    });
+    if(index_mod == undefined){
+        console.log("element non trouvé");
+        return;
+    }
+
+    let titre = document.getElementById("titre");
+    let catégorie = document.getElementById("categorie");
+    let priorité = document.getElementById("priorité");
+    let description = document.getElementById("description");
+
+    titre.value = données[index_mod].titre;
+    catégorie.value = données[index_mod].catégorie;
+    priorité.value = données[index_mod].priorité;
+    description.value = données[index_mod].description;
+    modifier(p_num_ticket);
+}
+
+function modifier (p_num_ticket){
+    if(!validation){
+        return ;
+    }
+    let index_update ;
+    données.forEach( (element,index) => {
+        if(element.num_ticket == p_num_ticket){
+            index_update = index;
+        }
+    });
+
+    données[index_update].titre = titre.value;
+    données[index_update].categorie = categorie.value;
+    données[index_update].priorité = priorité.value;
+    données[index_update].description = description.value;    
+
 
 }
 
