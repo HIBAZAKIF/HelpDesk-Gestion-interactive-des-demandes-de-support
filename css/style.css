@@ -64,19 +64,45 @@
         }
 
         .categorie_badge{
-            color:#64748B;
             background-color: #F0F3F7;
             border-radius: 20px;
             padding: 10px;
         }
 
         .priority_badge{
-            color:#BA6444;
             background-color: #FFF0E8;
             border-radius: 20px;
             padding: 10px;
         }
+        .haute{
+            background-color: #FFF0E8;
+            color: #BA6444;
+        }
+        .normale{
+            background-color: #FFF5DF;
+            color: #A67A2B;
+        }
 
+        .basse{
+            background-color: #E8F6EE;
+            color: #388867;
+        }
+
+        .logiciel{
+            background-color: #F1EAF9;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .réseau{
+            background-color: #EAF0F9;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .matériel{
+            background-color: #E9F5F1;
+            padding: 10px;
+            border-radius: 10px;
+        }
         .icons_NumTickets{
             display: flex;
             justify-content: space-between;
@@ -101,7 +127,7 @@
 
         .delete{
             color: #CC626A;
-        }
+        }   
 
 
         @media (min-width: 768px) {
