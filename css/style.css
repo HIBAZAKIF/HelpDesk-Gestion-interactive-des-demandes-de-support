@@ -33,10 +33,20 @@
             display: grid;
             grid-template-columns: 1fr;
         }
+        .container_ajouter_demande{
+            display: flex;
+            justify-content: end;
+            gap: 10px;
+            
+        }
 
-        .ajouter_demande{
+        .btn{
             background-color: #252F3E;
             color: white;
+            width: fit-content;
+        }
+        .annuler_modif{
+            display:none;
         }
 
         .premiere_col__header_listeDemandes{
@@ -57,26 +67,51 @@
 
         article{
             background-color: white;
-            border: 1px solid black;
             border-radius: 10px;
             padding: 20px;
             text-align: start;
         }
 
         .categorie_badge{
-            color:#64748B;
             background-color: #F0F3F7;
             border-radius: 20px;
             padding: 10px;
         }
 
         .priority_badge{
-            color:#BA6444;
             background-color: #FFF0E8;
             border-radius: 20px;
             padding: 10px;
         }
+        .haute{
+            background-color: #FFF0E8;
+            color: #BA6444;
+        }
+        .normale{
+            background-color: #FFF5DF;
+            color: #A67A2B;
+        }
 
+        .basse{
+            background-color: #E8F6EE;
+            color: #388867;
+        }
+
+        .logiciel{
+            background-color: #F1EAF9;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .réseau{
+            background-color: #EAF0F9;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .matériel{
+            background-color: #E9F5F1;
+            padding: 10px;
+            border-radius: 10px;
+        }
         .icons_NumTickets{
             display: flex;
             justify-content: space-between;
@@ -88,7 +123,6 @@
             justify-content: flex-start;
             gap: 10px;
         }
-
         .buttons{
             display: flex;
             justify-content: flex-end;
@@ -101,6 +135,13 @@
 
         .delete{
             color: #CC626A;
+        }   
+
+        table{
+            background-color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #FAFBFC;
         }
 
 
@@ -126,7 +167,7 @@
                 height: 50%;
             }
 
-            .liste_demandes{
+            .liste_demandes_grid{
                 grid-template-columns: 1fr 1fr;
             }
             .carte , .tab {
@@ -135,6 +176,9 @@
             .focus_carte_tab{
                 background-color: white;
                 color : #202A38;
+                border-radius: 10px;
+                margin: 5px; 
+                padding: 10px;
             }
         }
         
@@ -142,7 +186,7 @@
             .inputs{
                 grid-template-columns: 1fr 1fr 1fr;
             }
-            .liste_demandes{
+            .liste_demandes_grid{
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
