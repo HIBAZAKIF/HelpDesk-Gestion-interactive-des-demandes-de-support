@@ -6,7 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
 
     
 </head>
@@ -56,7 +59,10 @@
                                 <textarea name="description" id="description" placeholder="Décrivez le problème informatique rencontré..."></textarea>
                             </div>
                     </div>
-                    <button class="ajouter_demande" onclick = "ajouter()">＋  Ajouter la demande</button>
+                    <div class="container_ajouter_demande">
+                        <button class="btn annuler_modif" onclick = "annulerModif()"> anuller la modification</button>
+                        <button class="btn ajouter_demande" onclick = "ajouter()">＋  Ajouter la demande</button>
+                    </div>   
                 </fieldset>
             </form>
         </section>
@@ -67,7 +73,7 @@
 
                 <div class="premiere_col__header_listeDemandes">
                     <h2>Liste des demandes</h2>
-                    <p class="categorie_badge">3 demandes</p>
+                    <p class="categorie_badge nbr_demande">3 demandes</p>
                 </div>
 
                 <div class="carte_tab">
@@ -77,7 +83,7 @@
 
             </div>
 
-            <div id="liste_demandes" class="liste_demandes" >   
+            <div id="liste_demandes" class="liste_demandes liste_demandes_grid" >   
             </div> 
 
         </section>
